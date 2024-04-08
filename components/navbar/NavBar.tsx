@@ -3,9 +3,17 @@
 import Logo from "./Logo";
 import { MenuItem } from "./MenuItem";
 
-const NavBar = () => {
+interface Props {
+  inView: boolean;
+}
+
+const NavBar = ({ inView }: Props) => {
   return (
-    <nav className="flex justify-between items-center">
+    <nav
+      className={`sticky top-0 z-50 flex justify-between items-center p-2 transition-all duration-300 ease-out ${
+        inView && "shadow-md"
+      }`}
+    >
       <Logo />
       <div className="hidden md:block">
         <MenuItem />
