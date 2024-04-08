@@ -1,11 +1,9 @@
-import { ModeToggle } from "@/components/ModeToggle";
-import NavBar from "@/components/navbar/Navbar";
+import HomePage from "@/components/HomePage";
 
 export default function Home() {
   return (
-    <main>
-      <NavBar />
-      <ModeToggle />
-    </main>
+    <>
+      <HomePage />
+    </>
   );
 }
